@@ -35,7 +35,7 @@ func _handle_arrow(instruction, arrow_layer, arrow_id, tile_position):
 	var current_arrow_atlas_coords = get_cell_atlas_coords(arrow_layer, tile_position)
 	print("arrow atlas coords: ", current_arrow_atlas_coords)
 	if current_in_arrow_atlas_coords.x >= 0:
-		var new_in_arrow_atlas_coords = Vector2i(current_in_arrow_atlas_coords.x + 1, current_atlas_coords.y)
+		var new_in_arrow_atlas_coords = Vector2i(current_arrow_atlas_coords.x + 1, current_atlas_coords.y)
 		if new_in_arrow_atlas_coords.x > 5:
 			new_in_arrow_atlas_coords.x = 0
 		if instruction == 'remove':
