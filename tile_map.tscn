@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cjjtifgy6o3on" path="res://green_arrows.png" id="2_8kx26"]
 [ext_resource type="Script" path="res://TileMapLayout.gd" id="2_nq1py"]
-[ext_resource type="Texture2D" uid="uid://dbjrcu0bn651e" path="res://red_arrows.png" id="3_rp8k0"]
+[ext_resource type="Texture2D" uid="uid://bn861dldb27mv" path="res://red_arrows.png" id="3_lclsl"]
 [ext_resource type="Texture2D" uid="uid://dros1m0dvweg2" path="res://hex_grid (2).png" id="3_us5g4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85o0k"]
@@ -26,15 +26,15 @@ texture_region_size = Vector2i(110, 96)
 4:0/0 = 0
 5:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7bq5"]
-texture = ExtResource("3_rp8k0")
-texture_region_size = Vector2i(110, 96)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3eqk"]
+texture = ExtResource("3_lclsl")
+texture_region_size = Vector2i(110, 94)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
-5:0/0 = 0
 4:0/0 = 0
+5:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4ym8b"]
 tile_shape = 3
@@ -42,7 +42,7 @@ tile_offset_axis = 1
 tile_size = Vector2i(102, 94)
 sources/0 = SubResource("TileSetAtlasSource_85o0k")
 sources/1 = SubResource("TileSetAtlasSource_3x8qn")
-sources/4 = SubResource("TileSetAtlasSource_w7bq5")
+sources/2 = SubResource("TileSetAtlasSource_i3eqk")
 
 [node name="TileMap" type="TileMap"]
 tile_set = SubResource("TileSet_4ym8b")
