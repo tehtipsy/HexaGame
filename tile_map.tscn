@@ -1,32 +1,57 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvf2vufrq3lmu"]
+[gd_scene load_steps=9 format=3 uid="uid://dvf2vufrq3lmu"]
 
-[ext_resource type="Texture2D" uid="uid://di337wpifqvb5" path="res://hex_grid.png" id="1_qa2ma"]
+[ext_resource type="Texture2D" uid="uid://cjjtifgy6o3on" path="res://green_arrows.png" id="2_8kx26"]
 [ext_resource type="Script" path="res://TileMapLayout.gd" id="2_nq1py"]
+[ext_resource type="Texture2D" uid="uid://dbjrcu0bn651e" path="res://red_arrows.png" id="3_rp8k0"]
+[ext_resource type="Texture2D" uid="uid://dros1m0dvweg2" path="res://hex_grid (2).png" id="3_us5g4"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03p0b"]
-texture = ExtResource("1_qa2ma")
-margins = Vector2i(9, 8)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85o0k"]
+texture = ExtResource("3_us5g4")
+margins = Vector2i(9, 25)
 separation = Vector2i(18, 0)
 texture_region_size = Vector2i(110, 96)
 0:0/0 = 0
 1:0/0 = 0
-2:0/next_alternative_id = 4
 2:0/0 = 0
-2:0/1 = 1
-2:0/1/modulate = Color(1, 1, 0.0352941, 1)
-2:0/2 = 2
-2:0/2/modulate = Color(1, 0.054902, 1, 1)
-2:0/3 = 3
-2:0/3/modulate = Color(0.0392157, 1, 0.0392157, 1)
+3:0/0 = 0
+4:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3x8qn"]
+texture = ExtResource("2_8kx26")
+texture_region_size = Vector2i(110, 96)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7bq5"]
+texture = ExtResource("3_rp8k0")
+texture_region_size = Vector2i(110, 96)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+4:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4ym8b"]
 tile_shape = 3
 tile_offset_axis = 1
 tile_size = Vector2i(102, 94)
-sources/0 = SubResource("TileSetAtlasSource_03p0b")
+sources/0 = SubResource("TileSetAtlasSource_85o0k")
+sources/1 = SubResource("TileSetAtlasSource_3x8qn")
+sources/4 = SubResource("TileSetAtlasSource_w7bq5")
 
 [node name="TileMap" type="TileMap"]
 tile_set = SubResource("TileSet_4ym8b")
 format = 2
-layer_0/tile_data = PackedInt32Array(262154, 65536, 0, 196618, 65536, 0, 131083, 65536, 0, 131084, 65536, 0, 65549, 65536, 0, 65550, 65536, 0, 65551, 131072, 0, 65552, 131072, 0, 131088, 131072, 0, 131087, 131072, 0, 196622, 65536, 0, 196623, 131072, 0, 196624, 131072, 0, 196625, 131072, 0, 196626, 131072, 0, 196627, 131072, 0, 196628, 0, 0, 196629, 0, 0, 196630, 0, 0, 131094, 0, 0, 196619, 65536, 0, 196620, 65536, 0, 131085, 65536, 0, 131086, 65536, 0, 65553, 131072, 0, 65554, 131072, 0, 131090, 131072, 0, 262161, 131072, 0, 327698, 131072, 0, 262163, 131072, 0, 262164, 0, 0, 131091, 131072, 0, 131089, 131072, 0, 262160, 131072, 0, 262162, 131072, 0, 262158, 65536, 0, 262157, 65536, 0, 262156, 65536, 0, 196621, 65536, 0, 131095, 0, 0, 131093, 0, 0, 131092, 0, 0, 262166, 0, 0, 65559, 0, 0, 65558, 0, 0, 22, 0, 0, 21, 0, 0, 65557, 0, 0, 65556, 0, 0, 65555, 131072, 0, 131082, 65536, 0, 65545, 65536, 0, 65546, 65536, 0, 65547, 65536, 0, 65548, 65536, 0, 11, 65536, 0, 12, 65536, 0, 13, 65536, 0, 131080, 65536, 0, 131079, 65536, 0, 196616, 65536, 0, 131081, 65536, 0, 196617, 65536, 0, 262153, 65536, 0, 262152, 65536, 0, 327688, 65536, 0, 196615, 65536, 0, 17, 131072, 0)
+layer_0/name = "color"
+layer_1/name = "in_arrows"
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array(1, 1, 0)
+layer_2/name = "out_arrow"
+layer_2/z_index = 2
+layer_2/tile_data = PackedInt32Array()
 script = ExtResource("2_nq1py")
