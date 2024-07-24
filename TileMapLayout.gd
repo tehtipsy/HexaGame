@@ -57,19 +57,20 @@ func _handle_click(instruction, arrow_layer, arrow_id, tile_position):
 		if current_atlas_coords.x == 2 and current_source_id == 0: # white tile
 			_handle_arrow(instruction, arrow_layer, arrow_id, tile_position)
 
-func _input(event):
-	if event is InputEventMouseButton:
-		var _global_position = get_global_mouse_position()
-		var tile_position = local_to_map(to_local(_global_position))
-		print("Clicked tile: ", tile_position)
-		if !Input.is_key_pressed(KEY_SHIFT):
-			if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
-				_handle_click('add', tile_in_arrow_layer, tile_in_arrow_id, tile_position)
-			if event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
-				_handle_click('remove', tile_in_arrow_layer, tile_in_arrow_id, tile_position)
-		else:
-			print('SHIFTING')
-			if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
-				_handle_click('add', tile_out_arrow_layer, tile_out_arrow_id, tile_position)
-			if event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
-				_handle_click('remove', tile_out_arrow_layer, tile_out_arrow_id, tile_position)
+#func _input(event):
+	#if event is InputEventMouseButton:
+		#var _global_position = get_global_mouse_position()
+		#var tile_position = local_to_map(to_local(_global_position))
+		#print("Clicked tile: ", tile_position)
+		#print("Tile X: ", tile_position.x)
+		#if !Input.is_key_pressed(KEY_SHIFT):
+			#if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
+				#_handle_click('add', tile_in_arrow_layer, tile_in_arrow_id, tile_position)
+			#if event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
+				#_handle_click('remove', tile_in_arrow_layer, tile_in_arrow_id, tile_position)
+		#else:
+			#print('SHIFTING')
+			#if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
+				#_handle_click('add', tile_out_arrow_layer, tile_out_arrow_id, tile_position)
+			#if event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
+				#_handle_click('remove', tile_out_arrow_layer, tile_out_arrow_id, tile_position)
