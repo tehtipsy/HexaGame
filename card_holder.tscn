@@ -9,6 +9,7 @@ offset_bottom = 132.0
 script = ExtResource("1_h0dmt")
 
 [node name="Card" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_pla76")
 hframes = 5
 vframes = 2
