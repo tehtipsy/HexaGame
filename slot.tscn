@@ -1,16 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwtvnnjf6qkpy"]
+[gd_scene load_steps=3 format=3 uid="uid://bwtvnnjf6qkpy"]
 
 [ext_resource type="Script" path="res://slot.gd" id="1_xgch2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syii4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Slot" type="PanelContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_syii4")
 script = ExtResource("1_xgch2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 layout_mode = 2
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 show_behind_parent = true
 layout_mode = 2
 mouse_filter = 1

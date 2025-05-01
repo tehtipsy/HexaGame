@@ -19,6 +19,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="Tooltip" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -26,6 +27,7 @@ offset_bottom = 40.0
 script = ExtResource("1_qtxsx")
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TooltipPopup" type="PopupPanel" parent="UI"]
 unique_name_in_owner = true
