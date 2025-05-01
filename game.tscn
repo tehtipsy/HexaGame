@@ -22,3 +22,7 @@ offset_left = 580.0
 offset_top = 556.0
 offset_right = 710.0
 offset_bottom = 688.0
+
+[node name="SlotContainer" type="Node2D" parent="."]
+show_behind_parent = true
+top_level = true
