@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkgh6vg2dwvxj"]
+[gd_scene load_steps=7 format=3 uid="uid://bkgh6vg2dwvxj"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_dl61o"]
 [ext_resource type="Texture2D" uid="uid://ddjb3k617qiof" path="res://background.png" id="2_4qpfc"]
 [ext_resource type="PackedScene" uid="uid://dvf2vufrq3lmu" path="res://tile_map.tscn" id="2_o2d8b"]
 [ext_resource type="PackedScene" uid="uid://djss4jvgyuh74" path="res://card_container.tscn" id="3_nr1kw"]
 [ext_resource type="PackedScene" uid="uid://de56gnoqlwobw" path="res://card_holder.tscn" id="4_hs6tk"]
+[ext_resource type="PackedScene" uid="uid://5qk7do4n5phk" path="res://pause_menu.tscn" id="6_s03vm"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_dl61o")
@@ -36,3 +37,7 @@ offset_bottom = 688.0
 [node name="SlotContainer" type="Node2D" parent="."]
 show_behind_parent = true
 top_level = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_s03vm")]
+unique_name_in_owner = true
+visible = false
