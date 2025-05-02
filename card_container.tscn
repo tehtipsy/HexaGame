@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://djss4jvgyuh74"]
 
-[ext_resource type="Script" path="res://card_container.gd" id="1_d5hdc"]
+[ext_resource type="Script" uid="uid://clsxf5i68x8pl" path="res://card_container.gd" id="1_d5hdc"]
 [ext_resource type="Texture2D" uid="uid://dros1m0dvweg2" path="res://hex_grid (2).png" id="1_wryb7"]
 
 [sub_resource type="Animation" id="Animation_cvu8s"]
@@ -52,9 +52,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c2o6w"]
 _data = {
-"RESET": SubResource("Animation_cvu8s"),
-"deselect_card": SubResource("Animation_e6f0u"),
-"select_card": SubResource("Animation_05o02")
+&"RESET": SubResource("Animation_cvu8s"),
+&"deselect_card": SubResource("Animation_e6f0u"),
+&"select_card": SubResource("Animation_05o02")
 }
 
 [node name="CardContainer" type="Container"]

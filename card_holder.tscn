@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://de56gnoqlwobw"]
 
-[ext_resource type="Script" path="res://card_holder.gd" id="1_h0dmt"]
+[ext_resource type="Script" uid="uid://cl82iskqa5e2h" path="res://card_holder.gd" id="1_h0dmt"]
 [ext_resource type="Texture2D" uid="uid://dros1m0dvweg2" path="res://hex_grid (2).png" id="2_pla76"]
 
 [node name="CardHolder" type="Container"]
