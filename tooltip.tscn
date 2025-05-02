@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1s2b4kglot4l"]
 
-[ext_resource type="Script" path="res://tooltip.gd" id="1_qtxsx"]
+[ext_resource type="Script" uid="uid://clsqf6ffdf8nb" path="res://tooltip.gd" id="1_qtxsx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kjva"]
 content_margin_left = 15.0

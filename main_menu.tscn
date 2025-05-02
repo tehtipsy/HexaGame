@@ -1,18 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cbsjg0gxjkj8p"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_qm034"]
+[ext_resource type="Script" uid="uid://cccodrlo7v71r" path="res://main_menu.gd" id="1_qm034"]
 [ext_resource type="Texture2D" uid="uid://wad5urq6hmmv" path="res://Wrecked Ship.jpg" id="2_pca5o"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pkq4"]
-content_margin_left = 18.0
-content_margin_top = 10.0
-content_margin_right = 10.0
-content_margin_bottom = 18.0
-bg_color = Color(0.321313, 0.649887, 0.759348, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1bug"]
 content_margin_left = 18.0
@@ -32,6 +21,17 @@ content_margin_right = 10.0
 content_margin_bottom = 18.0
 bg_color = Color(0.0117647, 0.6, 0.6, 1)
 border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pkq4"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 18.0
+bg_color = Color(0.321313, 0.649887, 0.759348, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -72,9 +72,9 @@ grow_vertical = 2
 [node name="NewGameButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_4pkq4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_n1bug")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_u0r6u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4pkq4")
 text = "New game"
 
 [connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
