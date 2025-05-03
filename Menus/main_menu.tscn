@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cbsjg0gxjkj8p"]
 
-[ext_resource type="Script" uid="uid://cccodrlo7v71r" path="res://main_menu.gd" id="1_qm034"]
-[ext_resource type="Texture2D" uid="uid://wad5urq6hmmv" path="res://Wrecked Ship.jpg" id="2_pca5o"]
+[ext_resource type="Script" uid="uid://cccodrlo7v71r" path="res://Menus/main_menu.gd" id="1_qm034"]
+[ext_resource type="Texture2D" uid="uid://wad5urq6hmmv" path="res://Assets/Wrecked Ship.jpg" id="2_pca5o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1bug"]
 content_margin_left = 18.0

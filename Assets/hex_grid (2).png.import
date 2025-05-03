@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn861dldb27mv"
-path="res://.godot/imported/red_arrows.png-ceba6a8e58d8593f9a402c6718b9be05.ctex"
+uid="uid://dros1m0dvweg2"
+path="res://.godot/imported/hex_grid (2).png-16b68765d3e001519148dc7f1dcf7bc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://red_arrows.png"
-dest_files=["res://.godot/imported/red_arrows.png-ceba6a8e58d8593f9a402c6718b9be05.ctex"]
+source_file="res://Assets/hex_grid (2).png"
+dest_files=["res://.godot/imported/hex_grid (2).png-16b68765d3e001519148dc7f1dcf7bc1.ctex"]
 
 [params]
 

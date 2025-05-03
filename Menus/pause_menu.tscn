@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://5qk7do4n5phk"]
 
-[ext_resource type="Script" uid="uid://b24dd4qraeavo" path="res://pause_menu.gd" id="1_ihjhn"]
+[ext_resource type="Script" uid="uid://b24dd4qraeavo" path="res://Menus/pause_menu.gd" id="1_ihjhn"]
 
 [sub_resource type="Animation" id="Animation_5eiss"]
 length = 0.001
@@ -120,12 +120,12 @@ text = "Main Menu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_out2u")
+&"": SubResource("AnimationLibrary_out2u")
 }
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/ResumeGameButton" to="." method="_on_resume_game_button_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/OptionsMenuButton" to="." method="_on_options_menu_button_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/SaveGameButton" to="." method="_on_save_game_button_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/SaveGameButton" to="." method="_on_options_menu_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/SaveGameButton" to="." method="_on_save_game_button_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/RestartGameButton" to="." method="_on_restart_game_button_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

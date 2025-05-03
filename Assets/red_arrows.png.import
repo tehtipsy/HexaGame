@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddjb3k617qiof"
-path="res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"
+uid="uid://bn861dldb27mv"
+path="res://.godot/imported/red_arrows.png-927c6a80fc4cb7a2b414615a14c5b9a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background.png"
-dest_files=["res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"]
+source_file="res://Assets/red_arrows.png"
+dest_files=["res://.godot/imported/red_arrows.png-927c6a80fc4cb7a2b414615a14c5b9a2.ctex"]
 
 [params]
 

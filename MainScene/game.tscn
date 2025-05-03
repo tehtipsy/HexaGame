@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkgh6vg2dwvxj"]
+
+[ext_resource type="Script" uid="uid://cc38mgt28suj4" path="res://MainScene/Game.gd" id="1_o2l7h"]
+[ext_resource type="Texture2D" uid="uid://ddjb3k617qiof" path="res://Assets/background.png" id="2_cc82p"]
+[ext_resource type="PackedScene" uid="uid://dvf2vufrq3lmu" path="res://MainScene/tile_map.tscn" id="3_ypdxs"]
+[ext_resource type="PackedScene" uid="uid://5qk7do4n5phk" path="res://Menus/pause_menu.tscn" id="4_l5std"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_o2l7h")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cc82p")
+expand_mode = 3
+
+[node name="TileMap" parent="." instance=ExtResource("3_ypdxs")]
+position = Vector2(1, -3)
+
+[node name="SlotContainer" type="Node2D" parent="."]
+show_behind_parent = true
+top_level = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_l5std")]
+unique_name_in_owner = true
+visible = false
