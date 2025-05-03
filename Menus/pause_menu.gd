@@ -7,7 +7,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	handle_pause()
 
 
@@ -49,5 +49,4 @@ func _on_restart_game_button_pressed():
 
 func _on_main_menu_button_pressed():
 	resume_game()
-	get_tree().change_scene_to_file("res://main_menu.tscn")
-
+	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")

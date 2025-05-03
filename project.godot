@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="HexaGame"
-run/main_scene="res://main_menu.tscn"
+run/main_scene="res://Menus/main_menu.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [autoload]
 
-Tooltip="*res://tooltip.tscn"
+Tooltip="*res://MainScene/tooltip.tscn"
 
 [display]
 

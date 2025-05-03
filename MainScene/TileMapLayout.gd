@@ -1,6 +1,6 @@
 extends TileMap
 
-const SlotScene = preload("res://slot.tscn")
+const SlotScene = preload("res://MainScene/slot.tscn")
 
 @export var map_width: int = 15
 @export var map_height: int = 6
@@ -118,8 +118,8 @@ func _handle_click(tile_position):
 	# Get the tile data
 	var tile_data = get_cell_tile_data(tile_color_layer, tile_position)
 	if tile_data:
-		var current_source_id = get_cell_source_id(tile_color_layer, tile_position)
-		var current_atlas_coords = get_cell_atlas_coords(tile_color_layer, tile_position)
+		var _current_source_id = get_cell_source_id(tile_color_layer, tile_position)
+		var _current_atlas_coords = get_cell_atlas_coords(tile_color_layer, tile_position)
 		#print("Tile source_id: ", current_source_id)
 		#print("Tile atlas coords: ", current_atlas_coords)
 		# if current_atlas_coords.x == 2 and current_source_id == 0: # white tile

@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://dvf2vufrq3lmu"]
 
-[ext_resource type="Texture2D" uid="uid://cjjtifgy6o3on" path="res://green_arrows.png" id="2_8kx26"]
-[ext_resource type="Script" uid="uid://ws6k2nnemo8l" path="res://TileMapLayout.gd" id="2_nq1py"]
-[ext_resource type="Texture2D" uid="uid://bn861dldb27mv" path="res://red_arrows.png" id="3_lclsl"]
-[ext_resource type="Texture2D" uid="uid://dros1m0dvweg2" path="res://hex_grid (2).png" id="3_us5g4"]
+[ext_resource type="Texture2D" uid="uid://cjjtifgy6o3on" path="res://Assets/green_arrows.png" id="2_8kx26"]
+[ext_resource type="Script" uid="uid://ws6k2nnemo8l" path="res://MainScene/TileMapLayout.gd" id="2_nq1py"]
+[ext_resource type="Texture2D" uid="uid://bn861dldb27mv" path="res://Assets/red_arrows.png" id="3_lclsl"]
+[ext_resource type="Texture2D" uid="uid://dros1m0dvweg2" path="res://Assets/hex_grid (2).png" id="3_us5g4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85o0k"]
 texture = ExtResource("3_us5g4")
@@ -54,5 +54,4 @@ layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(1, 1, 0)
 layer_2/name = "out_arrow"
 layer_2/z_index = 2
-layer_2/tile_data = PackedInt32Array()
 script = ExtResource("2_nq1py")

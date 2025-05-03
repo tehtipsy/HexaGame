@@ -1,9 +1,9 @@
 extends Control
 
 
-func show_tooltip(position: Rect2i, data):
+func show_tooltip(pos: Rect2i, data):
 	set_tooltip_description(data)
-	%TooltipPopup.popup(position)
+	%TooltipPopup.popup(pos)
 
 func hide_tooltip():
 	%TooltipPopup.hide()
