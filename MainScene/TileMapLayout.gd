@@ -20,9 +20,11 @@ const SlotScene = preload("res://MainScene/slot.tscn")
 @onready var slot_container = get_node("../SlotContainer")
 
 var cell_slots = {}
+var gameStateInstance: GameState
 
 func _ready():
 	clear()
+	gameStateInstance = GameState.new()
 	_clear_cell_slots()
 	_generate_random_map()
 	_create_cell_slots()
@@ -30,6 +32,7 @@ func _ready():
 
 func _set_starting_tile():
 	var starting_tile_coors = Vector2i(randi() % map_width, randi() % map_height)
+	gameStateInstance.player.coordinates = starting_tile_coors
 	print("starting_tile_coors: ", starting_tile_coors)
 	set_cell(tile_color_layer, starting_tile_coors, tile_color_id, Vector2i(3, 0))
 	cell_slots[starting_tile_coors].hovering_over_cell += " Starting Tile"
@@ -115,16 +118,27 @@ func _place_card(tile_position):
 
 func _handle_click(tile_position):
 # func _handle_click(instruction, arrow_layer, arrow_id, tile_position):
+	if gameStateInstance.player.coordinates == tile_position:
+		gameStateInstance.actions["TakeAShit"].execute()
+	else:
+		_place_card(gameStateInstance.player.coordinates)
+		gameStateInstance.actions["MovePlayer"].execute(tile_position)
+		set_cell(tile_color_layer, tile_position, tile_color_id, Vector2i(3, 0))
+	
+
+	
+	
+	
 	# Get the tile data
-	var tile_data = get_cell_tile_data(tile_color_layer, tile_position)
-	if tile_data:
-		var _current_source_id = get_cell_source_id(tile_color_layer, tile_position)
-		var _current_atlas_coords = get_cell_atlas_coords(tile_color_layer, tile_position)
+	#var tile_data = get_cell_tile_data(tile_color_layer, tile_position)
+	#if tile_data:
+		#var _current_source_id = get_cell_source_id(tile_color_layer, tile_position)
+		#var _current_atlas_coords = get_cell_atlas_coords(tile_color_layer, tile_position)
 		#print("Tile source_id: ", current_source_id)
 		#print("Tile atlas coords: ", current_atlas_coords)
 		# if current_atlas_coords.x == 2 and current_source_id == 0: # white tile
 		# 	_handle_arrow(instruction, arrow_layer, arrow_id, tile_position)
-		_place_card(tile_position)
+		#_place_card(tile_position)
 
 func _input(event):
 	if event is InputEventMouseButton:
