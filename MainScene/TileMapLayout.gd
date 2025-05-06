@@ -34,7 +34,7 @@ func _set_starting_tile():
 	GameState.player.coordinates = starting_tile_coors
 	print("starting_tile_coors: ", starting_tile_coors)
 	_place_player_tile(starting_tile_coors)
-	_set_toopltip_text(starting_tile_coors, " Starting Tile")
+	_set_tooltip_text(starting_tile_coors, " Starting Tile")
 
 func _clear_cell_slots():
 	# Ensure the container is valid before trying to access children
@@ -102,7 +102,7 @@ func _place_player_tile(tile_position):
 	set_cell(tile_color_layer, tile_position, tile_color_id, Vector2i(3, 0))
 
 
-func _set_toopltip_text(tile_position, text):
+func _set_tooltip_text(tile_position, text):
 	cell_slots[tile_position].hovering_over_cell += text
 
 
