@@ -20,11 +20,10 @@ const SlotScene = preload("res://MainScene/slot.tscn")
 @onready var slot_container = get_node("../SlotContainer")
 
 var cell_slots = {}
-var gameStateInstance: GameState
+
 
 func _ready():
 	clear()
-	gameStateInstance = GameState.new()
 	_clear_cell_slots()
 	_generate_random_map()
 	_create_cell_slots()
@@ -32,10 +31,10 @@ func _ready():
 
 func _set_starting_tile():
 	var starting_tile_coors = Vector2i(randi() % map_width, randi() % map_height)
-	gameStateInstance.player.coordinates = starting_tile_coors
+	GameState.player.coordinates = starting_tile_coors
 	print("starting_tile_coors: ", starting_tile_coors)
-	set_cell(tile_color_layer, starting_tile_coors, tile_color_id, Vector2i(3, 0))
-	cell_slots[starting_tile_coors].hovering_over_cell += " Starting Tile"
+	_place_player_tile(starting_tile_coors)
+	_set_toopltip_text(starting_tile_coors, " Starting Tile")
 
 func _clear_cell_slots():
 	# Ensure the container is valid before trying to access children
@@ -94,18 +93,26 @@ func _create_cell_slots():
 			cell_slots[cell_coords] = slot_instance
 
 
-func _place_card(tile_position):
+func _place_blue_tile(tile_position):
 	var tile_atlas_coords = Vector2i(0,0) # get from card holder
 	set_cell(tile_color_layer, tile_position, tile_color_id, tile_atlas_coords)
 
 
+func _place_player_tile(tile_position):
+	set_cell(tile_color_layer, tile_position, tile_color_id, Vector2i(3, 0))
+
+
+func _set_toopltip_text(tile_position, text):
+	cell_slots[tile_position].hovering_over_cell += text
+
+
 func _handle_click(tile_position):
-	if gameStateInstance.player.coordinates == tile_position:
-		gameStateInstance.actions["TakeAShit"].execute()
+	if GameState.player.coordinates == tile_position:
+		GameState.actions["TakeAShit"].execute()
 	else:
-		_place_card(gameStateInstance.player.coordinates)
-		gameStateInstance.actions["MovePlayer"].execute(tile_position)
-		set_cell(tile_color_layer, tile_position, tile_color_id, Vector2i(3, 0))
+		_place_blue_tile(GameState.player.coordinates)
+		GameState.actions["MovePlayer"].execute(tile_position)
+		_place_player_tile(tile_position)
 
 
 func _input(event):

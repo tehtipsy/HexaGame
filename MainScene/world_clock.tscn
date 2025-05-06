@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://bw1k0jq7axcg6"]
+
+[ext_resource type="Texture2D" uid="uid://dmtkhlqcoowvc" path="res://Assets/clock/clock0.png" id="1_e0gul"]
+[ext_resource type="Texture2D" uid="uid://debsl0n4qmewx" path="res://Assets/clock/clock1.png" id="2_6tqvp"]
+[ext_resource type="Texture2D" uid="uid://b4rsbtnd8muoa" path="res://Assets/clock/clock2.png" id="3_vuv7v"]
+[ext_resource type="Texture2D" uid="uid://kh058nx61gsq" path="res://Assets/clock/clock3.png" id="4_f5udh"]
+[ext_resource type="Script" uid="uid://paqjp8xddvik" path="res://MainScene/world_clock.gd" id="5_btpo0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8q4x5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e0gul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6tqvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vuv7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f5udh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WorldClock" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_8q4x5")
+frame_progress = 0.62218
+script = ExtResource("5_btpo0")
