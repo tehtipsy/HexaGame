@@ -1,6 +1,8 @@
 extends Node
 
-class_name GameState
+
+signal time_changed(new_time, time_increment)
+
 
 var globalTime: int = 0
 var mapNodes = []
@@ -8,12 +10,15 @@ var mapNodes = []
 
 class Player:
 	var coordinates: Vector2i
+
+
 var player = Player.new()
 
 
-func moveGlobalTime(time):
+func advanceGlobalTime(time):
 	globalTime += time
-	print("time moved! time is now: ", globalTime)
+	print("time changed! time is now: ", globalTime)
+	time_changed.emit(globalTime, time)
 
 
 class Action:
@@ -29,12 +34,11 @@ class Action:
 		_moveTime.call(_time)
 
 
-var actions: Dictionary
+var actions: Dictionary[String, Action]
 
 
 func _movePlayer(position: Vector2i):
-	player.coordinates.x = position.x
-	player.coordinates.y = position.y
+	player.coordinates = position
 
 
 func _takeAShit(_dummy = null):
@@ -43,5 +47,5 @@ func _takeAShit(_dummy = null):
 
 
 func _init():
-	actions["MovePlayer"] = Action.new(_movePlayer, 1, moveGlobalTime)
-	actions["TakeAShit"] = Action.new(_takeAShit, 30, moveGlobalTime)
+	actions["MovePlayer"] = Action.new(_movePlayer, 1, advanceGlobalTime)
+	actions["TakeAShit"] = Action.new(_takeAShit, 30, advanceGlobalTime)

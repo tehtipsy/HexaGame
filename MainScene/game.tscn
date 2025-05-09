@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ddjb3k617qiof" path="res://Assets/background.png" id="2_cc82p"]
 [ext_resource type="PackedScene" uid="uid://dvf2vufrq3lmu" path="res://MainScene/tile_map.tscn" id="3_ypdxs"]
 [ext_resource type="PackedScene" uid="uid://5qk7do4n5phk" path="res://Menus/pause_menu.tscn" id="4_l5std"]
-[ext_resource type="Script" uid="uid://ccfhwjmwoduwp" path="res://MainScene/game_state.gd" id="5_cc82p"]
+[ext_resource type="PackedScene" uid="uid://bw1k0jq7axcg6" path="res://MainScene/world_clock.tscn" id="5_cc82p"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_o2l7h")
@@ -29,5 +29,7 @@ top_level = true
 unique_name_in_owner = true
 visible = false
 
-[node name="GameState" type="Node" parent="."]
-script = ExtResource("5_cc82p")
+[node name="WorldClock" parent="." instance=ExtResource("5_cc82p")]
+top_level = true
+position = Vector2(72, 639)
+scale = Vector2(2.9375, 2.77083)
