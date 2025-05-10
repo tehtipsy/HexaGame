@@ -106,10 +106,10 @@ func _set_tooltip_text(tile_position, text):
 	cell_slots[tile_position].hovering_over_cell += text
 
 
-func _handle_click(tile_position):
+func _handle_click(tile_position: Vector2i):
 	if GameState.player.coordinates == tile_position:
 		GameState.actions["TakeAShit"].execute()
-	else:
+	elif (tile_position.x < map_width and 0 <= tile_position.x and 0 <= tile_position.y and tile_position.y < map_height):
 		_place_blue_tile(GameState.player.coordinates)
 		GameState.actions["MovePlayer"].execute(tile_position)
 		_place_player_tile(tile_position)
