@@ -58,19 +58,18 @@ func _takeAShit(_dummy = null):
 
 func _increase_calories(args):
 	player.character.total_calories += args.calories_intake
-	advanceGlobalTime(args.time_to_consume)
 
 
-func _action_time(_dummy = null):
-	return 1
+func _action_time(args):
+	return args.duration
 
 
 func _init():
 	actions["MovePlayer"] = Action.new(_movePlayer, _action_time, advanceGlobalTime)
 	actions["TakeAShit"] = Action.new(_takeAShit, _action_time, advanceGlobalTime) # Action with optinal args
-	actions["EatSomething"] = Action.new(_increase_calories, _action_time, advanceGlobalTime) # Dynamic time change
 
 	# Player Actions
+	actions["EatSomething"] = Action.new(_increase_calories, _action_time, advanceGlobalTime) # Dynamic time change
 	actions["Forage"] = Action.new(_takeAShit, _action_time, advanceGlobalTime)
 	actions["Bushcraft"] = Action.new(_takeAShit, _action_time, advanceGlobalTime)
 	actions["Navigate"] = Action.new(_takeAShit, _action_time, advanceGlobalTime)
