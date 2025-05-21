@@ -4,7 +4,7 @@ class_name Character extends Control
 @export var total_calories: int = 0
 
 
-var inventory = {
+var inventory: Dictionary[String, String] = {
 	"slected_slot": "",
 	"backpack_slot": "",
 	"satchel_slot": "",
